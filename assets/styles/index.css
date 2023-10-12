@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Allura";
   src: url(/assets/fonts/Allura-Regular.ttf);
@@ -51,6 +52,19 @@ header .nav {
 header .nav__logo {
   font-family: Allura, cursive;
   font-size: 2.5rem;
+  color: #eeeeee;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgb(166, 114, 69)), color-stop(50%, transparent));
+  background: linear-gradient(to right, rgb(166, 114, 69) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-transition: background-position 0.9s ease, color 0.9s ease;
+  transition: background-position 0.9s ease, color 0.9s ease;
+  cursor: pointer;
+}
+header .nav__logo:hover {
+  background-position: 0%;
+  color: transparent;
 }
 header .nav__menu {
   display: -webkit-box;
@@ -499,4 +513,131 @@ header .hero__text h6 {
 }
 .section4 .events-container .events-grid .event-3 .address h5 {
   padding: 45px 0;
+}
+
+.section5 {
+  padding: 70px 0 110px;
+}
+.section5::after {
+  content: "";
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  background: url(../img/gmap.webp) center/cover;
+  left: 0;
+  bottom: -3300px;
+  z-index: -24;
+}
+.section5 .quote-container {
+  background: #eeeeee;
+  position: relative;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 65px 70px;
+  -webkit-box-shadow: 0 0 3px #333;
+          box-shadow: 0 0 3px #333;
+}
+.section5 .quote-container:before {
+  content: "";
+  position: absolute;
+  background: url(../img/avatar-02.jpg) center/cover;
+  height: 60px;
+  width: 60px;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50px;
+}
+.section5 .quote-container .text-container {
+  line-height: 30px;
+}
+.section5 .quote-container .text-container:before {
+  content: "❝";
+}
+.section5 .quote-container .text-container:after {
+  content: "❞";
+}
+.section5 .quote-container h2 {
+  margin: 30px 0 15px;
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+}
+.section5 .quote-container p {
+  color: rgb(166, 114, 69);
+}
+
+footer {
+  background: url(../img/bg-footer.jpg) center/cover;
+  text-align: left;
+  color: #eeeeee;
+  padding: 65px 32px;
+}
+footer .footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+footer .footer-content .left-part {
+  padding-right: 30px;
+  line-height: 30px;
+  color: rgb(182, 182, 182);
+}
+footer .footer-content .left-part h2 {
+  font-family: Allura, cursive;
+  font-size: 2.5rem;
+  color: rgb(166, 114, 69);
+  font-weight: 100;
+  margin-bottom: 15px;
+}
+footer .footer-content .right-part {
+  padding-left: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+footer .footer-content .right-part h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+footer .footer-content .right-part input {
+  margin-top: 15px;
+  background: none;
+  border: 1px solid rgba(166, 114, 69, 0.15);
+  padding: 7px 13px;
+  width: 250px;
+}
+footer .footer-content .right-part .followUs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+footer .footer-content .right-part .followUs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #595956;
+  font-size: 0.8rem;
+  width: 200px;
+  cursor: pointer;
+}
+footer .footer-content .right-part .followUs ul i {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+footer .footer-content .right-part .followUs ul i:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }/*# sourceMappingURL=index.css.map */

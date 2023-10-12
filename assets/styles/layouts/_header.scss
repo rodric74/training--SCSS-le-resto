@@ -14,6 +14,18 @@ header {
     &__logo {
       font-family: $font1;
       font-size: 2.5rem;
+      color: $white; // Couleur de base
+      background: linear-gradient(to right, $color1 50%, transparent 50%);
+      background-size: 200% 100%;
+      background-position: 100%;
+      -webkit-background-clip: text;
+      transition: background-position 0.9s ease, color 0.9s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-position: 0%;
+        color: transparent;
+      }
     }
 
     &__menu {
